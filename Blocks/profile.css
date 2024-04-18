@@ -1,0 +1,51 @@
+.profile {
+  max-width: 882px;
+  margin: auto;
+  display: flex;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  max-height: 77px;
+  margin-left: 30px;
+}
+.profile__avatar {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.profile__name {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 56px;
+}
+
+.profile__role {
+  font-weight: 400;
+  line-height: 21, 78;
+  font-size: 18px;
+}
+
+.profile__add-button {
+  height: 50px;
+  width: 150px;
+  border: 2px solid white;
+  display: flex;
+  margin-left: auto;
+  background-image: url(../images/Vector\ +.png);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.3s ease;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+}
+
+/* .profile__add-button-button {
+  height: 22px;
+  width: 22px;
+  margin: auto;
+} */
