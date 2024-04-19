@@ -1,0 +1,53 @@
+.elements {
+  max-width: 882px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.elements__element {
+  width: 282px;
+  height: 361px;
+  background-color: white;
+  background-image: url(../images/kirill-pershin-1088404-unsplash.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  border-radius: 10px;
+  position: relative;
+}
+
+.elements__trash-icon {
+  height: 18px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.elements__trash-icon:hover {
+  opacity: 0.5;
+}
+
+.elements__like-icon {
+  height: 18px;
+  position: absolute;
+  bottom: 30px;
+  right: 18px;
+  transition: opacity 0.3s ease;
+}
+
+.elements__like-icon:hover {
+  opacity: 0.5;
+}
+
+.elements__title {
+  position: absolute;
+  bottom: 31px;
+  left: 21px;
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+}
