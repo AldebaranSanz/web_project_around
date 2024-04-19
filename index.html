@@ -59,5 +59,66 @@
       </section>
       <section class="footer"></section>
     </main>
+
+    <!-- Ventana emergente de "Editar perfil" -->
+
+    <div id="popupEEditProfile" class="popup">
+      <div class="popup__container">
+        <h2 class="popup__title">Editar Perfil</h2>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="popup__imput"
+          placeholder="Nombre"
+        />
+
+        <input
+          type="text"
+          id="aboutME"
+          name="aboutMe"
+          class="popup__imput"
+          placeholder="Acerca de mi"
+        />
+        <button id="createBtn" class="popup__button">Crear</button>
+        <img
+          src="./images/Close Icon.svg"
+          alt="close icon"
+          class="popup__close-icon"
+        />
+      </div>
+    </div>
+
+    <!-- Ventana emergente de "Nuevo Lugar" -->
+
+    <div id="popupNewPlace" class="popup">
+      <div class="popup__container">
+        <h2 class="popup__title">Nuevo Lugar</h2>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="popup__imput"
+          placeholder="Título"
+        />
+
+        <input
+          type="text"
+          id="link"
+          name="link"
+          class="popup__imput"
+          placeholder="Enlace a la imagen"
+        />
+        <button id="createBtn" class="popup__button">Crear</button>
+        <img
+          src="./images/Close Icon.svg"
+          alt="close icon"
+          class="popup__close-icon"
+        />
+      </div>
+    </div>
+
+    <!-- Fondo para cualquier popup -->
+    <div class="popup__background"></div>
   </body>
 </html>
