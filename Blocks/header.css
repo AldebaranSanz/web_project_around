@@ -1,5 +1,32 @@
 .header {
   max-width: 882px;
   max-height: 74px;
-  margin: 45px auto 40px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.header__logo {
+  width: 133px;
+  height: 33px;
+  display: flex;
+  margin-bottom: 41px;
+}
+
+/* Media queries para 320px  */
+
+@media (max-width: 31em) {
+  .header__logo {
+    margin-left: 20px;
+  }
+}
+
+/* Media queries para 720px  */
+
+@media (max-width: 64em) {
+  .header__logo {
+    margin-left: 40px;
+  }
 }

@@ -55,3 +55,30 @@
   overflow: hidden;
   width: calc(100% - 57px);
 }
+
+/* Media queries para 320px  */
+
+@media (max-width: 31em) {
+  .elements {
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .elements__element {
+    max-width: 282px;
+  }
+}
+
+/* Media queries para 220px  */
+
+@media (max-width: 55em) {
+  .elements {
+    max-width: 720px;
+    column-gap: 18px;
+    justify-content: center;
+  }
+
+  .elements__element {
+    max-width: 282px;
+  }
+}
