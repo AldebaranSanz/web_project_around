@@ -67,7 +67,7 @@
     <!-- Ventana emergente de "Editar perfil" -->
 
     <div id="popupEditProfile" class="popup">
-      <div class="popup__container">
+      <div class="popup__container form">
         <h2 class="popup__title">Editar Perfil</h2>
         <input
           type="text"
@@ -75,6 +75,7 @@
           name="name"
           class="popup__imput"
           placeholder="Nombre"
+          value="Jacques Cousteau"
         />
 
         <input
@@ -83,8 +84,9 @@
           name="aboutMe"
           class="popup__imput"
           placeholder="Acerca de mi"
+          value="Explorador"
         />
-        <button id="createBtn" class="popup__button">Crear</button>
+        <button id="saveBtn" class="popup__button">Guardar</button>
         <img
           src="./images/Close Icon.svg"
           alt="close icon"
@@ -95,9 +97,8 @@
     </div>
 
     <!-- Ventana emergente de "Nuevo Lugar" -->
-
     <div id="popupAddPlace" class="popup">
-      <div class="popup__container">
+      <div class="popup__container form">
         <h2 class="popup__title">Nuevo Lugar</h2>
         <input
           type="text"
@@ -123,9 +124,6 @@
         />
       </div>
     </div>
-
-    <!-- Fondo para cualquier popup -->
-    <div class="popup__overlay"></div>
 
     <!-- SCRIPT -->
     <script src="./pages/scripts.js"></script>
