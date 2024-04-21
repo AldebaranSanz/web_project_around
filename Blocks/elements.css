@@ -42,6 +42,10 @@
   opacity: 0.5;
 }
 
+.elements__like-icon:active {
+  content: url(../images/Vector\ -\ like\ active.svg);
+}
+
 .elements__title {
   position: absolute;
   bottom: 31px;
