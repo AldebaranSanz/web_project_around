@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .popup {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -7,7 +14,12 @@
   height: 100%;
   z-index: 999;
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: center;
   flex-direction: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -17,9 +29,14 @@
   max-width: 430px;
   padding: 36px;
   margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   z-index: 1000;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -53,7 +70,11 @@
   line-height: 21.78px;
   border: none;
   border-radius: 2px;
+  -webkit-transition: opacity 0.3 s ease;
+  -o-transition: opacity 0.3 s ease;
   transition: opacity 0.3 s ease;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
@@ -68,6 +89,8 @@
   top: -43px;
   right: -43px;
   z-index: 1000;
+  -webkit-transition: opacity 0.3 s ease;
+  -o-transition: opacity 0.3 s ease;
   transition: opacity 0.3 s ease;
 }
 
@@ -76,5 +99,7 @@
 }
 
 .popup__opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
