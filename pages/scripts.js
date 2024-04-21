@@ -16,28 +16,39 @@ const profileName = document.querySelector(".profile__name");
 const inputAboutMe = document.querySelector("#aboutMe");
 const aboutMe = document.querySelector(".profile__role");
 
-// Funciones
+// FUNCIONES
+
+//Añadir Lugar
 
 function addPlace() {
   console.log("click en añadir lugar");
   popupAddPlace.classList.add("popup__opened");
 }
 
+//Editar Perfil
 function editProfile() {
   console.log("click en editar perfil");
   popupEditProfile.classList.add("popup__opened");
 }
 
-function closePopup(popupToClose) {
-  console.log("click en cerrar popup");
-  popupToClose.classList.remove("popup__opened");
-}
-
+//Guardar perfil editado
 function saveProfile() {
   console.log("click en guardar perfil");
   profileName.textContent = inputName.value;
   aboutMe.textContent = inputAboutMe.value;
   closePopup(popupEditProfile);
+}
+
+//PRUEBA resetear perfil cuando se cierre el popup
+function resetForm() {
+  console.log("form cerrado sin guardar");
+}
+
+//Para todos los popups
+function closePopup(popupToClose) {
+  console.log("click en cerrar popup");
+  popupToClose.classList.remove("popup__opened");
+  popupToClose;
 }
 
 // Eventos - Listeners
