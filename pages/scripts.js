@@ -15,6 +15,8 @@ const inputName = document.querySelector("#name");
 const profileName = document.querySelector(".profile__name");
 const inputAboutMe = document.querySelector("#aboutMe");
 const aboutMe = document.querySelector(".profile__role");
+const inputTitle = document.querySelector("#title");
+const inputLink = document.querySelector("#link");
 
 // FUNCIONES
 
@@ -39,16 +41,25 @@ function saveProfile() {
   closePopup(popupEditProfile);
 }
 
-//PRUEBA resetear perfil cuando se cierre el popup
-function resetForm() {
-  console.log("form cerrado sin guardar");
-}
-
 //Para todos los popups
 function closePopup(popupToClose) {
   console.log("click en cerrar popup");
   popupToClose.classList.remove("popup__opened");
   popupToClose;
+}
+
+//Resetear campos del form "editar perfil" cuando se cierre el popup
+function resetEditProfileForm() {
+  console.log("form cerrado sin guardar");
+  inputName.value = profileName.textContent;
+  inputAboutMe.value = aboutMe.textContent;
+}
+
+//Resetear campos del form "editar perfil" cuando se cierre el popup
+function resetAddplaceForm() {
+  console.log("form cerrado sin guardar");
+  inputTitle.value = "";
+  inputLink.value = "";
 }
 
 // Eventos - Listeners
@@ -57,8 +68,10 @@ addButton.addEventListener("click", addPlace);
 editButton.addEventListener("click", editProfile);
 popupCloseEditProfile.addEventListener("click", function () {
   closePopup(popupEditProfile);
+  resetEditProfileForm();
 });
 popupCloseAddPlace.addEventListener("click", function () {
   closePopup(popupAddPlace);
+  resetAddplaceForm();
 });
 saveButton.addEventListener("click", saveProfile);
