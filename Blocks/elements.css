@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-.elements {
+.elements__grid {
   max-width: 882px;
   margin: 50px auto;
   display: -webkit-box;
