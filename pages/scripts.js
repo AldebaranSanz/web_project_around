@@ -35,6 +35,11 @@ function editProfile() {
 
 //Guardar perfil editado
 function saveProfile() {
+  if (inputName.value.trim() === "" || inputAboutMe.value.trim() === "") {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
+
   console.log("click en guardar perfil");
   profileName.textContent = inputName.value;
   aboutMe.textContent = inputAboutMe.value;
