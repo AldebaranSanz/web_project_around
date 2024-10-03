@@ -18,6 +18,9 @@ const aboutMe = document.querySelector(".profile__role");
 const inputTitle = document.querySelector("#title");
 const inputLink = document.querySelector("#link");
 
+//variables tarjetas
+const cardContainer = document.querySelector(".elements__element");
+
 // FUNCIONES
 
 //Añadir Lugar

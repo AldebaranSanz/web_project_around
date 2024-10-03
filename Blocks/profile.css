@@ -123,8 +123,10 @@
     line-height: 16.94px;
     margin-bottom: 40px;
   }
+
   .profile__add-button {
     margin: auto;
+    align-items: center;
   }
 }
 
@@ -141,6 +143,12 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    align-content: center;
+  }
+
+  .profile__info {
+    align-items: center;
+    margin: auto;
   }
 
   .profile__avatar {
@@ -155,11 +163,12 @@
   .profile__role {
     text-align: center;
     font-size: 14px;
-    line-height: 16.94px;
-    margin-bottom: 40px;
+    line-height: 16.94px;x
+    margin: auto 40px;
   }
+
   .profile__add-button {
-    margin: auto;
+    margin: 20px;
   }
 }
 

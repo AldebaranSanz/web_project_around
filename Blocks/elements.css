@@ -28,6 +28,7 @@
   background-size: contain;
   border-radius: 10px;
   position: relative;
+  object-fit: cover;
 }
 
 .elements__trash-icon {
@@ -107,5 +108,10 @@
 
   .elements__element {
     max-width: 282px;
+  }
+
+  .elements__grid {
+    justify-content: center;
+    column-gap: 20px;
   }
 }
