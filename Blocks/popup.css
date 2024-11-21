@@ -103,3 +103,8 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.popup__form {
+  flex-direction: column;
+  display: flex;
+}

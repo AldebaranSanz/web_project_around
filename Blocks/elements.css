@@ -29,6 +29,12 @@
   border-radius: 10px;
   position: relative;
   object-fit: cover;
+  overflow: hidden;
+}
+
+.elements__image {
+  height: 282px;
+  width: 282px;
 }
 
 .elements__trash-icon {
@@ -59,7 +65,7 @@
   opacity: 0.5;
 }
 
-.elements__like-icon:active {
+.elements__like-icon_active {
   content: url(../images/Vector-like-active.svg);
 }
 
