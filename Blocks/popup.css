@@ -108,3 +108,17 @@
   flex-direction: column;
   display: flex;
 }
+
+.popup__container {
+  padding: 0;
+}
+
+.popupImage__caption {
+  font: inter;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  position: absolute;
+  bottom: -20px;
+}

@@ -2,6 +2,7 @@
 const popup = document.querySelector(".popup");
 const popupEditProfile = document.getElementById("popupEditProfile");
 const popupAddPlace = document.getElementById("popupAddPlace");
+const popupImageElement = document.querySelector("#popupImage");
 const addButton = document.querySelector(".profile__add-button");
 const editButton = document.querySelector(".profile__edit-button");
 const popupCloseEditProfile = document.getElementById(
@@ -9,6 +10,12 @@ const popupCloseEditProfile = document.getElementById(
 );
 const popupCloseAddPlace = document.getElementById("popupAddPlace__close-icon");
 const saveButton = document.querySelector("#saveBtn");
+const popupImage = document.querySelector("#popupImage");
+// const popupImageCaption = document.querySelector(".popupImage__caption");
+const popupCloseImage = document.getElementById("popupImage__close-icon");
+const popupImageCaption = popupImageElement.querySelector(
+  ".popupImage__caption"
+);
 
 //variables formularios
 const inputName = document.querySelector("#name");
@@ -58,8 +65,15 @@ function createCard(name, link) {
 
   // Modificar los elementos con los datos de la tarjeta
   card.querySelector(".elements__title").textContent = name;
+  const cardImage = card.querySelector(".elements__image");
+
   card.querySelector(".elements__image").src = link;
   card.querySelector(".elements__image").alt = `Imagen de ${name}`;
+
+  // Añadir listener para abrir el popup de imagen
+  cardImage.addEventListener("click", function () {
+    openImagePopup(name, link);
+  });
 
   //card.style.backgroundImage = `url(${link})`;
   card
@@ -108,6 +122,7 @@ function editProfile() {
 
 //Guardar perfil editado
 function saveProfile() {
+  event.preventDefault();
   if (inputName.value.trim() === "" || inputAboutMe.value.trim() === "") {
     alert("Por favor, completa todos los campos.");
     return;
@@ -119,11 +134,33 @@ function saveProfile() {
   closePopup(popupEditProfile);
 }
 
+//Abrir imagen
+function openImagePopup(name, link) {
+  event.preventDefault();
+
+  const popupImage = popupImageElement.querySelector(".popupImage__image");
+  const popupCaption = popupImageElement.querySelector(".popupImage__caption");
+
+  // Asignar los valores a los elementos del popup
+  popupImage.src = link;
+  popupImage.alt = `Imagen de ${name}`;
+  popupCaption.textContent = name;
+
+  // Abrir el popup
+  popupImageElement.classList.add("popup__opened");
+
+  console.log("Imagen abierta en el popup:", name, link);
+}
+
 //Para todos los popups
 function closePopup(popupToClose) {
   console.log("click en cerrar popup");
-  popupToClose.classList.remove("popup__opened");
-  popupToClose;
+  if (popupToClose) {
+    popupToClose.classList.remove("popup__opened");
+    console.log("Popup cerrado");
+  } else {
+    console.error("El popup a cerrar no existe.");
+  }
 }
 
 //Resetear campos del form "editar perfil" cuando se cierre el popup
@@ -152,6 +189,12 @@ popupCloseAddPlace.addEventListener("click", function () {
   closePopup(popupAddPlace);
   resetAddplaceForm();
 });
+
+popupCloseImage.addEventListener("click", function () {
+  const popupImageElement = document.querySelector("#popupImage");
+  closePopup(popupImageElement);
+});
+
 saveButton.addEventListener("click", saveProfile);
 
 formAddCard.addEventListener("submit", function (event) {
