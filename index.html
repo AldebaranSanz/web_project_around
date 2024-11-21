@@ -195,6 +195,37 @@
       </div>
     </div>
 
+    <!-- Ventana emergente de "Nuevo Lugar" -->
+    <div id="popupAddPlace" class="popup">
+      <div class="popup__container form">
+        <h2 class="popup__title">Nuevo Lugar</h2>
+        <form class="popup__form popup__form_addcard">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="popup__imput"
+            placeholder="Título"
+          />
+
+          <input
+            type="text"
+            id="link"
+            name="link"
+            class="popup__imput"
+            placeholder="Enlace a la imagen"
+          />
+          <button id="createBtn" class="popup__button">Crear</button>
+        </form>
+        <img
+          src="./images/Close-Icon.svg"
+          alt="close icon"
+          class="popup__close-icon"
+          id="popupAddPlace__close-icon"
+        />
+      </div>
+    </div>
+
     <!-- TEMPLATE PARA CARDS -->
     <template id="card-template">
       <li class="elements__element">
