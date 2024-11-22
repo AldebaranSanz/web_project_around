@@ -34,6 +34,9 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 56px;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  max-width: 373px;
 }
 
 .profile__role {
@@ -158,6 +161,8 @@
   .profile__name {
     font-size: 22px;
     text-align: center;
+    text-overflow:ellipsis;
+    overflow: hidden;
   }
 
   .profile__role {

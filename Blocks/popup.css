@@ -110,6 +110,10 @@
 }
 
 .popup__container {
+  padding: 36px;
+}
+
+.popup__container_image {
   padding: 0;
 }
 
